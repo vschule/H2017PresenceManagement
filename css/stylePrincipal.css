@@ -1,0 +1,52 @@
+html,body {
+    padding:0;
+    margin:0;
+    height:100%;
+    min-height:100%;
+}
+
+
+.quad{
+    width:50%;
+    height:100%;
+    float:left;
+
+}
+
+.line{
+    height:50%;
+    width:100%;
+}
+
+
+.equal, .equal > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 0 auto;
+}
+
+.image
+{
+    width: 80%;
+    margin-top:1px;
+}
+
+
+@media screen and (max-width:800px) {
+    .image
+    {
+        width: 90%;
+        margin-top: 25%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .image
+    {
+        width: 110%;
+        margin-top: 40%;
+    }
+}

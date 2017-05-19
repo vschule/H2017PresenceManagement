@@ -19,46 +19,44 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="PHP" type="php">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/composer" />
-          <root url="file://$MODULE_DIR$/vendor/fig/http-message-util" />
-          <root url="file://$MODULE_DIR$/vendor/firebase/php-jwt" />
-          <root url="file://$MODULE_DIR$/vendor/google/auth" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
-          <root url="file://$MODULE_DIR$/vendor/kreait/firebase-php" />
-          <root url="file://$MODULE_DIR$/vendor/kreait/firebase-tokens" />
-          <root url="file://$MODULE_DIR$/vendor/lcobucci/jwt" />
-          <root url="file://$MODULE_DIR$/vendor/mtdowling/jmespath.php" />
-          <root url="file://$MODULE_DIR$/vendor/psr/cache" />
-          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/composer" />
-          <root url="file://$MODULE_DIR$/vendor/fig/http-message-util" />
-          <root url="file://$MODULE_DIR$/vendor/firebase/php-jwt" />
-          <root url="file://$MODULE_DIR$/vendor/google/auth" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
-          <root url="file://$MODULE_DIR$/vendor/kreait/firebase-php" />
-          <root url="file://$MODULE_DIR$/vendor/kreait/firebase-tokens" />
-          <root url="file://$MODULE_DIR$/vendor/lcobucci/jwt" />
-          <root url="file://$MODULE_DIR$/vendor/mtdowling/jmespath.php" />
-          <root url="file://$MODULE_DIR$/vendor/psr/cache" />
-          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
           <root url="phar://$MODULE_DIR$/composer.phar/" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/composer.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/fig/http-message-util" />
+          <root url="file://$MODULE_DIR$/vendor/firebase/php-jwt" />
+          <root url="file://$MODULE_DIR$/vendor/google/auth" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/vendor/kreait/firebase-php" />
+          <root url="file://$MODULE_DIR$/vendor/kreait/firebase-tokens" />
+          <root url="file://$MODULE_DIR$/vendor/mtdowling/jmespath.php" />
+          <root url="file://$MODULE_DIR$/vendor/psr/cache" />
+          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/fig/http-message-util" />
+          <root url="file://$MODULE_DIR$/vendor/firebase/php-jwt" />
+          <root url="file://$MODULE_DIR$/vendor/google/auth" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/vendor/kreait/firebase-php" />
+          <root url="file://$MODULE_DIR$/vendor/kreait/firebase-tokens" />
+          <root url="file://$MODULE_DIR$/vendor/mtdowling/jmespath.php" />
+          <root url="file://$MODULE_DIR$/vendor/psr/cache" />
+          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
         </SOURCES>
       </library>
     </orderEntry>
