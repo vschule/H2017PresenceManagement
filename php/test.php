@@ -17,7 +17,6 @@ $database = $firebase->getDatabase();
  */
 
 
-
 function getcourses($username): array
 {
     global $database;
@@ -84,3 +83,4 @@ function getpassword($username)
     return $password;
 }
 
+getpassword("vincent.pont");
