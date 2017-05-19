@@ -10,17 +10,94 @@ $firebase = (new Firebase\Factory())
     ->withDatabaseUri('https://jesuisencours-63b19.firebaseio.com/')
     ->create();
 
-echo 'Test';
-
 $database = $firebase->getDatabase();
 
-$reference = $database->getReference('courses')
-    ->orderByChild("prof")
-    ->equalTo(123);
-$snapshot = $reference->getSnapshot();
+/**
+ * @param $database
+ */
 
-foreach ($reference->getValue() as $course){
-    foreach ($course as $value){
-        echo "value is $value <br/>";
 
-    }}
+
+function getcourses($username): array
+{
+    global $database;
+    $reference = $database->getReference();
+
+    $reference = $database->getReference('courses')
+        ->orderByChild("prof")
+        ->equalTo($username);
+
+    $list_courses = array();
+    foreach ($reference->getValue() as $course) {
+        $c = array();
+        $c['date'] = $course['date'];
+        $c['start'] = $course['start'];
+        $c['end'] = $course['end'];
+        $c['name'] = $course['name'];
+        $c['id'] = key($course);
+        array_push($list_courses, $c);
+    }
+
+    return $list_courses;
+
+}
+
+/**
+ * @param $database
+ * @return array
+ */
+function getstudents(): array
+{
+    global $database;
+
+    $reference = $database->getReference('students');
+
+    $snapshot = $reference->getSnapshot();
+
+    $students = array();
+    foreach ($snapshot->getValue() as $student) {
+       $s = $student["firstname"] . " " . $student['lastname'];
+       array_push($students, $s);
+    }
+
+    return $students;
+}
+
+
+
+/**
+ * @param $username
+ * @return mixed
+ */
+function getpassword($username)
+{
+    global $database;
+
+    $reference = $database->getReference('prof')
+        ->orderByChild("username")
+        ->equalTo($username);
+
+    $prof = $reference->getValue();
+    foreach ($prof as $x) {
+        $password = $x['password'];
+    }
+    return $password;
+}
+
+$list_students = getstudents();
+
+
+
+$password = getpassword("vincent.pont");
+
+foreach ($list_students as $student){
+    echo $student;
+}
+
+echo $password;
+
+$co = getcourses("matt.pole");
+
+foreach ($co as $course){
+    echo $course['start']. ' '. $course['date'] . $course['name'];
+}
