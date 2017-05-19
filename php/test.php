@@ -84,20 +84,3 @@ function getpassword($username)
     return $password;
 }
 
-$list_students = getstudents();
-
-
-
-$password = getpassword("vincent.pont");
-
-foreach ($list_students as $student){
-    echo $student;
-}
-
-echo $password;
-
-$co = getcourses("matt.pole");
-
-foreach ($co as $course){
-    echo $course['start']. ' '. $course['date'] . $course['name'];
-}
