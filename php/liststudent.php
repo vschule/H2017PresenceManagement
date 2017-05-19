@@ -72,7 +72,7 @@ echo "<tr><th>Nom</th><th>Presence</th></tr></thead><tbody>";
 $list_courses = array();
 foreach ($snapshot->getValue() as $student) {
     $s = $student["firstname"] . " " . $student['lastname'] ;
-    $status = $student["courses"]["190517-2200"]["status"];
+    $status = $student["courses"]["190517-2300"]["status"];
     array_push($students, $s);
 
 
