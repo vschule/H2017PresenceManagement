@@ -32,10 +32,12 @@ echo "<html lang='en'>";
 echo "<head>";
     echo "<meta charset='UTF-8'>";
     echo "<title>Principal</title>";
-    echo "<link rel='stylesheet' type='text/css' href='css/stylePrincipal.css'/>";
+    echo "<link rel='stylesheet' type='text/css' href='../css/styleCours.css'/>";
 echo "</head>";
 echo "<body>";
-
+echo "<table>";
+echo "<thead>";
+echo "<tr><th>Date</th><th>Start</th><th>End</th><th>name</th></tr></thead><tbody>";
 $list_courses = array();
     foreach ($reference->getValue() as $course) {
         $c = array();
@@ -43,10 +45,39 @@ $list_courses = array();
         $c['start'] = $course['start'];
         $c['end'] = $course['end'];
         $c['name'] = $course['name'];
-        $c['id'] = key($course);
-
+        $c['id'] = $course['id'];
+        $_SESSION['coursSelect'] = $c['id'];
         array_push($list_courses, $c);
 
+        echo "<tr>";
+            echo "<th scope='row'>";
+                echo $c['date'];
+            echo "</th>";
+
+        echo "<th scope='row'>";
+        echo $c['start'];
+        echo "</th>";
+
+
+        echo "<th scope='row'>";
+        echo $c['end'];
+        echo "</th>";
+
+
+        echo "<th scope='row'>";
+        echo $c['name'];
+        echo "</th>";
+
+        echo "<th scope='row'>";
+        echo "<form action='liststudent.php' method='post'>";
+        echo "<input type='submit' name='".$c['id'] . "' value='Details'/>";
+        echo "</form>";
+        echo "</th>";
+
+        echo "</tr>";
 
     }
-
+    echo "</tbody>";
+    echo "</table>";
+echo "</body>";
+echo "</html>";
