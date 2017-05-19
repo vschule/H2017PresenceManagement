@@ -40,6 +40,7 @@
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
           <root url="file://$MODULE_DIR$/vendor/kreait/firebase-php" />
           <root url="file://$MODULE_DIR$/vendor/kreait/firebase-tokens" />
+          <root url="file://$MODULE_DIR$/vendor/lcobucci/jwt" />
           <root url="file://$MODULE_DIR$/vendor/mtdowling/jmespath.php" />
           <root url="file://$MODULE_DIR$/vendor/psr/cache" />
           <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
@@ -54,6 +55,7 @@
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
           <root url="file://$MODULE_DIR$/vendor/kreait/firebase-php" />
           <root url="file://$MODULE_DIR$/vendor/kreait/firebase-tokens" />
+          <root url="file://$MODULE_DIR$/vendor/lcobucci/jwt" />
           <root url="file://$MODULE_DIR$/vendor/mtdowling/jmespath.php" />
           <root url="file://$MODULE_DIR$/vendor/psr/cache" />
           <root url="file://$MODULE_DIR$/vendor/psr/http-message" />

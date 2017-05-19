@@ -1,4 +1,11 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: vincent
+ * Date: 19/05/17
+ * Time: 20:55
+ */
+
 require '../vendor/autoload.php';
 
 use Kreait\Firebase;
@@ -10,24 +17,26 @@ $firebase = (new Firebase\Factory())
     ->withDatabaseUri('https://jesuisencours-63b19.firebaseio.com/')
     ->create();
 
+session_start();
+
 $database = $firebase->getDatabase();
 
-/**
- * @param $database
- */
-
-
-
-function getcourses($username): array
-{
-    global $database;
     $reference = $database->getReference();
 
     $reference = $database->getReference('courses')
         ->orderByChild("prof")
-        ->equalTo($username);
+        ->equalTo($_SESSION['adminUser']);
 
-    $list_courses = array();
+echo "<!DOCTYPE html>";
+echo "<html lang='en'>";
+echo "<head>";
+    echo "<meta charset='UTF-8'>";
+    echo "<title>Principal</title>";
+    echo "<link rel='stylesheet' type='text/css' href='css/stylePrincipal.css'/>";
+echo "</head>";
+echo "<body>";
+
+$list_courses = array();
     foreach ($reference->getValue() as $course) {
         $c = array();
         $c['date'] = $course['date'];
@@ -35,32 +44,9 @@ function getcourses($username): array
         $c['end'] = $course['end'];
         $c['name'] = $course['name'];
         $c['id'] = key($course);
+
         array_push($list_courses, $c);
+
+
     }
-
-    return $list_courses;
-
-}
-
-/**
- * @param $database
- * @return array
- */
-function getstudents(): array
-{
-    global $database;
-
-    $reference = $database->getReference('students');
-
-    $snapshot = $reference->getSnapshot();
-
-    $students = array();
-    foreach ($snapshot->getValue() as $student) {
-       $s = $student["firstname"] . " " . $student['lastname'];
-       array_push($students, $s);
-    }
-
-    return $students;
-}
-
 
