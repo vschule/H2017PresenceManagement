@@ -13,6 +13,7 @@
     "require": {
         "php": "^7.0",
         "ext-mbstring": "*",
+        "ext-openssl": "*",
         "fig/http-message-util": "^1.1",
         "google/auth": "^0.11.0",
         "guzzlehttp/guzzle": "^6.2.1",
@@ -26,11 +27,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Firebase\\": "src/Firebase"
-        },
-        "files": [
-            "src/Firebase.php"
-        ]
+            "Kreait\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kreait\\Tests\\": "tests"
+        }
     },
     "config": {
         "platform": {
@@ -40,7 +43,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.x-dev"
+            "dev-master": "3.x-dev"
         }
     }
 }

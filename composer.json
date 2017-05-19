@@ -1,5 +1,5 @@
 {
-  "require": {
-    "kreait/firebase-php": "2.3.1"
-  }
+    "require": {
+        "kreait/firebase-php": "^3.0"
+    }
 }

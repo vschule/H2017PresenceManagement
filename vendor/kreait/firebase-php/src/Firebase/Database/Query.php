@@ -1,11 +1,11 @@
 <?php
 
-namespace Firebase\Database;
+namespace Kreait\Firebase\Database;
 
-use Firebase\Database\Query\Filter;
-use Firebase\Database\Query\Sorter;
-use Firebase\Exception\ApiException;
-use Firebase\Exception\QueryException;
+use Kreait\Firebase\Database\Query\Filter;
+use Kreait\Firebase\Database\Query\Sorter;
+use Kreait\Firebase\Exception\ApiException;
+use Kreait\Firebase\Exception\QueryException;
 use Psr\Http\Message\UriInterface;
 
 /**
@@ -296,7 +296,7 @@ class Query
         return (string) $this->getUri();
     }
 
-    private function withAddedFilter(Filter $filter)
+    private function withAddedFilter(Filter $filter): self
     {
         $query = clone $this;
         $query->filters[] = $filter;
@@ -304,7 +304,7 @@ class Query
         return $query;
     }
 
-    private function withSorter(Sorter $sorter)
+    private function withSorter(Sorter $sorter): self
     {
         if ($this->sorter) {
             throw new QueryException($this, 'This query is already ordered.');

@@ -1,13 +1,13 @@
 <?php
 
-namespace Firebase;
+namespace Kreait\Firebase;
 
 use Firebase\Auth\Token\Handler as TokenHandler;
-use Firebase\Exception\InvalidArgumentException;
-use Firebase\Exception\LogicException;
-use Firebase\V3\Firebase;
 use Google\Auth\CredentialsLoader;
 use GuzzleHttp\Psr7;
+use Kreait\Firebase;
+use Kreait\Firebase\Exception\InvalidArgumentException;
+use Kreait\Firebase\Exception\LogicException;
 use Psr\Http\Message\UriInterface;
 
 final class Factory
@@ -68,13 +68,15 @@ final class Factory
         ]);
     }
 
-    public function create()
+    public function create(): Firebase
     {
         $serviceAccount = $this->getServiceAccount();
-        $databaseUri = $this->databaseUri ?? $this->getDatabaseUriFromServiceAccount($serviceAccount);
-        $tokenHandler = $this->tokenHandler ?? $this->getDefaultTokenHandler($serviceAccount);
 
-        return new Firebase($serviceAccount, $databaseUri, $tokenHandler);
+        return new Firebase(
+            $serviceAccount,
+            $this->databaseUri ?? $this->getDatabaseUriFromServiceAccount($serviceAccount),
+            $this->tokenHandler ?? $this->getDefaultTokenHandler($serviceAccount)
+        );
     }
 
     private function getDatabaseUriFromServiceAccount(ServiceAccount $serviceAccount): UriInterface
@@ -94,10 +96,7 @@ final class Factory
         }
         // @codeCoverageIgnoreEnd
 
-        throw new LogicException(sprintf(
-            'No service account has been found. Please set the path to a service account credentials file with %s::%s()',
-            static::class, 'withCredentials($path)'
-        ));
+        throw new Firebase\Exception\CredentialsNotFound($this->credentialPaths);
     }
 
     private function getServiceAccountCandidates(): array

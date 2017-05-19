@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "086aa4578df48985f4159f618c6e4016",
+    "content-hash": "6ad66306a5841710545ba86b154e5e7b",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -327,20 +327,21 @@
         },
         {
             "name": "kreait/firebase-php",
-            "version": "2.3.1",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kreait/firebase-php.git",
-                "reference": "12067023f5fddc782da146d231a03a94f2806c05"
+                "reference": "f7dcbb24567b1b3262a6d5ca0b931633f931cc17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kreait/firebase-php/zipball/12067023f5fddc782da146d231a03a94f2806c05",
-                "reference": "12067023f5fddc782da146d231a03a94f2806c05",
+                "url": "https://api.github.com/repos/kreait/firebase-php/zipball/f7dcbb24567b1b3262a6d5ca0b931633f931cc17",
+                "reference": "f7dcbb24567b1b3262a6d5ca0b931633f931cc17",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
+                "ext-openssl": "*",
                 "fig/http-message-util": "^1.1",
                 "google/auth": "^0.11.0",
                 "guzzlehttp/guzzle": "^6.2.1",
@@ -356,16 +357,13 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Firebase\\": "src/Firebase"
-                },
-                "files": [
-                    "src/Firebase.php"
-                ]
+                    "Kreait\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -386,7 +384,7 @@
                 "google",
                 "sdk"
             ],
-            "time": "2017-04-12T04:41:27+00:00"
+            "time": "2017-04-25T10:06:18+00:00"
         },
         {
             "name": "kreait/firebase-tokens",

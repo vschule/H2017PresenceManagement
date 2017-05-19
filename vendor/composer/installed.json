@@ -602,21 +602,22 @@
     },
     {
         "name": "kreait/firebase-php",
-        "version": "2.3.1",
-        "version_normalized": "2.3.1.0",
+        "version": "3.0.1",
+        "version_normalized": "3.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/kreait/firebase-php.git",
-            "reference": "12067023f5fddc782da146d231a03a94f2806c05"
+            "reference": "f7dcbb24567b1b3262a6d5ca0b931633f931cc17"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kreait/firebase-php/zipball/12067023f5fddc782da146d231a03a94f2806c05",
-            "reference": "12067023f5fddc782da146d231a03a94f2806c05",
+            "url": "https://api.github.com/repos/kreait/firebase-php/zipball/f7dcbb24567b1b3262a6d5ca0b931633f931cc17",
+            "reference": "f7dcbb24567b1b3262a6d5ca0b931633f931cc17",
             "shasum": ""
         },
         "require": {
             "ext-mbstring": "*",
+            "ext-openssl": "*",
             "fig/http-message-util": "^1.1",
             "google/auth": "^0.11.0",
             "guzzlehttp/guzzle": "^6.2.1",
@@ -629,21 +630,18 @@
             "friendsofphp/php-cs-fixer": "^2.0",
             "phpunit/phpunit": "^6.0"
         },
-        "time": "2017-04-12T04:41:27+00:00",
+        "time": "2017-04-25T10:06:18+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.x-dev"
+                "dev-master": "3.x-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Firebase\\": "src/Firebase"
-            },
-            "files": [
-                "src/Firebase.php"
-            ]
+                "Kreait\\": "src"
+            }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [

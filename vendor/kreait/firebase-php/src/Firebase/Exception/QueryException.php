@@ -1,8 +1,8 @@
 <?php
 
-namespace Firebase\Exception;
+namespace Kreait\Firebase\Exception;
 
-use Firebase\Database\Query;
+use Kreait\Firebase\Database\Query;
 
 class QueryException extends \RuntimeException implements FirebaseException
 {
@@ -20,7 +20,7 @@ class QueryException extends \RuntimeException implements FirebaseException
         return $this->query;
     }
 
-    public static function fromApiException(ApiException $e, Query $query)
+    public static function fromApiException(ApiException $e, Query $query): self
     {
         $message = $e->getMessage();
 

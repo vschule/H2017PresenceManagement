@@ -11,7 +11,6 @@ class ComposerStaticInit1012381f06382b5d569ec3c6bc45e0f8
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
-        'f7c6080b46f9fe41a46a657439674576' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -23,6 +22,10 @@ class ComposerStaticInit1012381f06382b5d569ec3c6bc45e0f8
         'L' => 
         array (
             'Lcobucci\\JWT\\' => 13,
+        ),
+        'K' => 
+        array (
+            'Kreait\\' => 7,
         ),
         'J' => 
         array (
@@ -39,7 +42,6 @@ class ComposerStaticInit1012381f06382b5d569ec3c6bc45e0f8
         array (
             'Firebase\\JWT\\' => 13,
             'Firebase\\Auth\\Token\\' => 20,
-            'Firebase\\' => 9,
             'Fig\\Http\\Message\\' => 17,
         ),
     );
@@ -56,6 +58,10 @@ class ComposerStaticInit1012381f06382b5d569ec3c6bc45e0f8
         'Lcobucci\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/lcobucci/jwt/src',
+        ),
+        'Kreait\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kreait/firebase-php/src',
         ),
         'JmesPath\\' => 
         array (
@@ -84,10 +90,6 @@ class ComposerStaticInit1012381f06382b5d569ec3c6bc45e0f8
         'Firebase\\Auth\\Token\\' => 
         array (
             0 => __DIR__ . '/..' . '/kreait/firebase-tokens/src',
-        ),
-        'Firebase\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase',
         ),
         'Fig\\Http\\Message\\' => 
         array (
